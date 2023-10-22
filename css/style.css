@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;0,900;1,400;1,600&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* Reseto y estilo general para todo el sitio web*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+/* Header, logo y navbar */
+#header {
+    width: 100%;
+    background: linear-gradient(to right, #306b39, #7fcb26) 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 5%;
+    height: 15vh;
+}
+nav a {
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #eb9520;
+    padding: 5px;
+    font-weight: bold;
+    margin: 0px 5px;
+
+}
+/* grid para el main del index*/
+.grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 2%;
+    align-items: center;
+    margin-bottom: 10%;
+    justify-content: center;
+    justify-items: center;
+}
+.grid-it1 {
+    grid-column: 1/7;
+    align-content: center;
+    padding: 5%;
+}
+.grid-it2, .grid-it4 {
+    grid-column: 1/4;
+    padding: 5%;
+    padding-left: 8%;
+}
+.grid-it3, .grid-it7  {
+    grid-column: 4/7;
+    padding: 5%;
+
+}
+.grid-it5 {
+    grid-column: 4/7;
+    padding: 5%;
+    align-self: flex-start;
+}
+.grid-it6 {
+    grid-column: 1/4;
+    padding: 5%;
+}
+
+/* flex column*/
+.container-flex {
+    display: flex;
+    flex-direction: column;
+}
+section {
+    margin-bottom: 2%;
+}
+/* Sector con link a la tienda */
+.tienda {
+    width: 100%;
+    background: linear-gradient(to right, #306b39, #7fcb26) 100%;
+    display: flex;
+    align-items: stretch;
+    gap: 3%;
+    padding: 5%;
+    justify-content: space-around;
+
+}
+/* Cada div consta de un titulo y foto link al sector de la tienda correspondiente*/
+.tienda div {
+    width: 30%;
+    border: 2px solid #306b39;
+    padding: 2%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+    gap: 15%;
+}
+.tienda div a {
+    width: 100%;
+}
+/* Da el mismo formato a la foto de cada link*/
+.tienda img {
+    margin-top: 5%;
+    width: 100%;
+    height: 50vh;
+}
+/* Estilos de la pag tienda*/
+
+.aside {
+    font-size: 12px;
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: #71f060;
+    height: 100%;
+    }
+.aside ul li {
+    margin: 10% 0%;
+    font-weight: bold;
+}
+
+#tienda {
+    grid-column: 2/7;
+    padding: 3%;
+}
+/*Division para cada categoria*/
+#tienda .categoria {
+    margin-bottom: 5%;
+    border-bottom: 2px solid #306b39;  
+}
+/* tarjeta con la descripcion de cada planta*/
+#tienda .tarjeta {
+    border: 1px solid #000;
+    width: 100%;
+    padding: 3%;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    margin-bottom: 3%;  
+    height: 90vh;
+}
+/*Para el texto que sobresale de la tarjeta*/
+#tienda .tarjeta div {
+    overflow: scroll;
+}
+#tienda .tarjeta img {
+    width: 30vw;
+    padding: 5%;
+    height: 60%;
+}
+#tienda .tarjeta div {
+    padding: 0% 5%; 
+}
+/*Estilo solo para el titilo de la tarjeta*/
+#tienda .tarjeta div h3 {
+    margin-bottom: 3%; 
+    font-style: italic; 
+    font-weight: bolder;
+}
+#tienda h1, #tienda h2  {
+    margin-bottom: 2%; 
+    text-align: center;
+    }
+/* Sector de articulos con intereses */
+.articulosInteres{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.intereses {
+    padding: 4%;
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+    height: 80vh;
+}
+.intereses article {
+    border: 1px solid #000;
+    padding: 4%;
+    width: 40%;
+    box-sizing: border-box;
+    justify-content: space-around;
+    overflow: auto;
+}
+/* link a redes sociales. Aca coloque la animacion*/
+.contacto{
+    padding: 5%;
+}
+.enlaces-social {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 2%;
+    animation: cambiarColor 8s 1s infinite;
+}
+.enlaces-social h2 {
+    text-align: center;
+}
+.enlaces-social ul{
+    display: flex;
+    justify-content: center;
+}
+/* para quitar el subrayado de los link*/
+li a {
+    text-decoration: none;
+}
+/* para quitar el deco de la lista*/
+ul li {
+    list-style: none;
+    margin: 3%;
+}
+.contacto div {
+    margin-bottom: 5%;
+}
+.enlaces-local {
+    padding: 6%;
+    display: flex;
+    gap: 4%;
+    justify-content: space-around;
+    height: 80vh;
+}
+.enlaces-local ul {
+    width: 50%;
+}
+/* Formulario de contacto*/
+.formulario {
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+form { 
+    padding: 8%;
+    width: 80%;
+}
+.formulario .form-label {
+    margin-bottom: 2%;
+}
+.formulario img {
+    padding: 2%;
+    width: 30%;
+}
+/* Botones de formulario*/
+.boton {
+    background-color: #306b39;
+    padding: 3%;
+    border-radius: 10px;
+    box-shadow: -5px 5px #999999;
+    font-weight: bold;
+}
+.formBotones {
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+}
+/* Nuevo color de fondo en el boton al colocar el puntero encima */
+.formBotones input[class="boton"]:hover {
+    background-color: #71ff1f; }
+/* Footer*/
+footer {
+    background: linear-gradient(to right, #306b39, #7fcb26) 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 3%;
+}
+footer div {
+    width: 45%;
+    padding: 2%;
+}
+footer li {
+    margin-bottom: 1px;
+}
+footer h5 {
+    margin-bottom: 4px;
+    text-justify: center;
+}
+.footer-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+li a {
+    color: #000;
+}
+/* MediaQuery para responsive*/
+@media screen and (max-width: 600px) { 
+    header {
+        height: 15vh;
+        justify-content: end;
+    }
+
+    main, .tienda, .intereses, .contacto, .formulario, .footer {
+        display: block;
+    }
+    .intro {
+        display: flex;
+        flex-direction: column;
+    }
+    .intro img {
+        width: 100%;
+    }
+    .tienda div {
+        width: 100%;
+        margin: 5% 0%;
+    }
+    .tienda div img {
+        width: 100%;
+        padding: 2%;
+        max-height: 40vh;
+    }
+    .intereses article {
+        width: 80%;
+        height: 50vh;
+        overflow: scroll;
+        margin: 10%;
+    }
+    .contacto {
+        margin-top: 60%;
+    }
+    .enlaces-local {
+        flex-direction: column;
+        align-items: center;
+    }
+    .enlaces-local ul, .enlaces-local iframe {
+        width: 100%;
+    }
+    .formulario form {
+        width: 100%;   
+    }
+    .formulario img {
+        display: none;
+    }
+    .formBotones input {
+        font-size: small;
+    }
+    footer {
+        flex-direction: column;
+    }
+    footer div {
+        width: 100%;
+        padding: 5%;
+    }
+    .footerContactos {
+      padding-left: 18%;
+    }
+    /* Pagina tienda */
+    #principalTienda{
+        display: block;
+    }
+    .categoria .tarjeta {
+        display: flex;
+        flex-direction: column;
+    }
+    #principalTienda .aside {
+        width: 100%;
+        height: 20vh;
+        gap: 1px;
+        font-size: 16px;
+    }
+    #principalTienda .aside  ul li {
+        margin: 1%;
+        border: 1px solid #eb9520;
+        border-radius: 5px;
+        background-color: #eb9520;
+        padding: 1%;
+        text-align: center;
+    }
+    #principalTienda .aside  ul li a {
+        font-size: 12px;
+    }
+
+    #principalTienda #tienda .categoria {
+        display: block;
+    }
+    #principalTienda #tienda .tarjeta img {
+        width: 100%;
+        height: 50vh;
+        padding: 2%;
+    }
+    #principalTienda #tienda .tarjeta div {
+        overflow: scroll;
+    }
+}
+@media screen and (max-width:900px) {
+    .grid-it2{
+        grid-column: 2/6;
+        align-content: center;
+    }
+    .grid-it3{
+        grid-column: 2/6;
+        align-content: center;
+    }
+    .grid-it4, .grid-it5{
+        padding-left: 10%;
+    }
+    .tienda {
+        margin: 5% 0%;
+        justify-content: center;
+    }
+    .tienda img {
+        height: 40vh;
+    }
+    .contacto form {
+        padding: 10%;
+    }
+    .boton-form {
+        text-align: center;
+        }
+    
+    /* Pagina tienda */
+    #principalTienda{
+        display: block;
+    }
+    .categoria .tarjeta {
+        display: flex;
+        flex-direction: column;
+    }
+    #principalTienda .aside {
+        width: 100% ;
+        padding: 0%;
+        gap: 0;
+        align-items: center;
+    }
+    #principalTienda .aside  ul {
+        display: flex;    
+    }
+    #principalTienda .aside  ul li{
+        margin: 1%;
+        border: 1px solid #eb9520;
+        border-radius: 5px;
+        background-color: #eb9520;
+        padding: 1%;
+        text-align: center;
+    }
+    #principalTienda #tienda .tarjeta img {
+        width: 100%;
+        height: 50vh;
+        padding: 2%;
+    }
+    
+    
+}
+@media screen and (max-width:1024px) {
+    * {
+        font-size: 1.2rem;
+    }
+    .intro {
+        padding: 0% 4%;
+    }
+    .tienda img {
+        height: 30vh;
+    }
+    .categoria .tarjeta {
+        display: flex;
+        flex-direction: column;
+    }
+    #tienda .categoria .tarjeta img {
+        width: 80%;
+        height: 60vh;
+        padding: 8%;
+    }
+}
+@media screen and (max-width: 1400px ) {
+    #principal, footer, .aside, header, .mainTienda { 
+        font-size: 1.4rem;
+    }
+    .grid-it2{
+        grid-column: 1/4;
+        align-content: center;
+        padding-left: 15%;
+    }
+    .grid-it3{
+        grid-column: 4/7;
+        align-content: center;
+    }
+    .grid-it4 {
+        padding-left: 10%;
+    }
+    .tienda img {
+        height: 60vh;
+    }
+    .formLabel , .formEntrada {
+        height: 8vh;
+    }
+
+    .boton {
+        width: 30%;
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+}
+/* animacion para cambiar el color de fondo de la seccion de redes social */
+@keyframes cambiarColor {
+    from {
+      background-color: linear-gradient(to right, #306b39, #7fcb26); /* Color inicial */
+    }
+    to {
+      background-color: #56ee42; /* Color final */
+    }
+}
