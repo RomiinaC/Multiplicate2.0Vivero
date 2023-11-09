@@ -122,19 +122,19 @@
                 <form action="">
                     <div class="container-flex">
                         <label for="nombre" class="formLLabel">Nombre</label>
-                        <input type="text" class="formEntrada" id="nombre" name="nombre">
+                        <input type="text" class="formEntrada" id="nombre" name="nombre" minlength="2" maxlength="40" required onchange="validarEntrada()">
                     </div>
                     <div class="container-flex">
                         <label for="email" class="formLabel">Correo electronico</label>
-                        <input type="email" class="formEntrada" id="email" name="email" placeholder="nombre@gmail.com" required>
+                        <input type="email" class="formEntrada" id="email" name="email" placeholder="nombre@email.com" required minlength="10" pattern="[a-z0-9._%\-]+@[a-z]+\.[a-z]{3}$" onchange="validarEmail()">
                     </div>
                     <div class="container-flex">
                         <label for="telefono" class="formLabel">Telefono</label>
-                        <input type="tel" class="formEntrada" id="telefono" name="telefono">
+                        <input type="tel" class="formEntrada" id="telefono" name="telefono" maxlength="12" onchange="validarTel()" >
                     </div>
                     <div class="container-flex">
                         <label for="mensaje" class="formLabel">Mensaje</label>
-                        <textarea class="formTextArea" id="mensaje" name="mensaje" rows="8"></textarea>
+                        <textarea class="formTextArea" id="mensaje" name="mensaje" rows="8" maxlength="80"></textarea>
                     </div>
                     <div class="formBotones">
                         <input type="submit" class="boton" value="Enviar" >
@@ -161,6 +161,6 @@
                 <p>Spring 1 curso Multiplicate 2.0</p>
             </div>
     </footer>
-
+    <script src="js/main.js"></script>
 </body>
 </html>

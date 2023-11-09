@@ -264,6 +264,17 @@ form {
 /* Nuevo color de fondo en el boton al colocar el puntero encima */
 .formBotones input[class="boton"]:hover {
     background-color: #71ff1f; }
+
+/* Aplica una sombra roja alrededor del input cuando no se completo correctamente*/
+.inputNoValido {
+    border: 1px solid #ff0000;
+    box-shadow: 0 0 5px 1px #ff0000; 
+    } 
+
+.formulario input:hover , .formTextArea:hover {
+    border: 1px solid #71ff1f;
+    box-shadow: 0 0 5px 1px #71ff1f; }
+
 /* Footer*/
 footer {
     background: linear-gradient(to right, #306b39, #7fcb26) 100%;
