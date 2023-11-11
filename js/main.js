@@ -5,6 +5,9 @@ const inputMensaje = document.getElementById("mensaje")
 const pattern =/[a-z0-9._%\-]+@[a-z]+\.[a-z]{3}$/
 const patternNum = /^\d+$/
 
+const btnDark = document.getElementById("claro-oscuro")
+
+
 function validarEntrada() {
     let nombre = inputNombre.value
     if(nombre.length < 3) {
@@ -32,3 +35,13 @@ function validarTel() {
     }
 
 }
+
+btnDark.addEventListener("click", () => {
+    document.body.classList.toggle("dark")
+    const links = document.getElementsByTagName("a")    
+    for( let link of links) {
+        link.classList.toggle("dark")
+        link.style.backgroundColor = "transparent"
+    }
+})
+

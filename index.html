@@ -13,6 +13,7 @@
     <header id="header">
         <img src="images/Good_Vibras-removebg-preview.png" alt="Logo de Vivero Good Vibras" id="logo" width="100px">
         <nav>
+            <button id="claro-oscuro"><i class="fa-solid fa-circle-half-stroke"></i></button>
             <a href="pages/tienda.html">TIENDA</a>
         </nav>
     </header>
@@ -20,12 +21,13 @@
         <img src="images/poster.jpg" alt="Banner del vivero" width="100%">
         <section class="grid-container intro">
             <h1 class="grid-it1">Vivero Good Vibras</h1>
-            <div class="grid-it2 history">
+            <div class="history grid-it1">
                 <p>Desde 1990, un entusiasta de la botánica decidió dar vida a su sueño. Inspirado por su amor inquebrantable por las plantas y la naturaleza, fundó "Good Vibras".</p>
+                <img src="images/germinacion-en-mano.jpg" alt="manos sosteniendo una germinacion">
                 <p>Hoy, después de tanto tiempo, trabajo y dedicación, seguimos manteniendo este sueño vivo. Siempre disponibles para ayudarte a cuidar tus amadas plantas. Todo lo que busques y necesites lo vas a encontrar con nosotros.</p>
-                <p>Cuando se siguen los sueños con pasión y se cuida el entorno, las maravillas de la naturaleza pueden florecer en cualquier lugar.</p>    
+                <p>Cuando se siguen los sueños con pasión y se cuida el entorno, <em>las maravillas de la naturaleza pueden florecer en cualquier lugar.</em> </p>    
             </div>
-            <img src="images/germinacion-en-mano.jpg" alt="manos sosteniendo una germinacion" width="80%" class="grid-it3">
+            
             <div class="grid-it4">    
                 <h2>Contamos con:</h2>
                 <ul>
@@ -104,8 +106,8 @@
             <div class="enlaces-social">
                 <h2>Seguinos en nuestras redes sociales</h2>
                 <ul>
-                    <li><a href="https://accounts.google.com/signup/v2/createaccount?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=SignUp&theme=glif"><i class="fa-solid fa-envelope fa-lg"></i></a></li>
-                    <li><a href="https://www.facebook.com/?locale=es_LA"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
+                   <li><a href="https://www.tiktok.com/es/"><i class="fa-brands fa-tiktok"></i></a></li>
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
                     <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-lg"></i></a></li>
                 </ul>
             </div>
@@ -121,7 +123,7 @@
             <div class="formulario">
                 <form action="">
                     <div class="container-flex">
-                        <label for="nombre" class="formLLabel">Nombre</label>
+                        <label for="nombre" class="formLabel">Nombre</label>
                         <input type="text" class="formEntrada" id="nombre" name="nombre" minlength="2" maxlength="40" required onchange="validarEntrada()">
                     </div>
                     <div class="container-flex">
@@ -134,7 +136,7 @@
                     </div>
                     <div class="container-flex">
                         <label for="mensaje" class="formLabel">Mensaje</label>
-                        <textarea class="formTextArea" id="mensaje" name="mensaje" rows="8" maxlength="80"></textarea>
+                        <textarea class="formTextArea" id="mensaje" name="mensaje" rows="5" maxlength="180"></textarea>
                     </div>
                     <div class="formBotones">
                         <input type="submit" class="boton" value="Enviar" >

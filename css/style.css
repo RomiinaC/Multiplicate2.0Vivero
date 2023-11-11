@@ -27,6 +27,15 @@ nav a {
     margin: 0px 5px;
 
 }
+#claro-oscuro {
+    background-color: transparent;
+    border: none;
+  
+}
+.dark {
+    color: #fff;
+    background-color: #000;
+}
 /* grid para el main del index*/
 .grid-container {
     width: 100%;
@@ -41,7 +50,7 @@ nav a {
 .grid-it1 {
     grid-column: 1/7;
     align-content: center;
-    padding: 5%;
+    padding: 3%;
 }
 .grid-it2, .grid-it4 {
     grid-column: 1/4;
@@ -68,8 +77,16 @@ nav a {
     display: flex;
     flex-direction: column;
 }
-section {
-    margin-bottom: 2%;
+section, p {
+    margin-bottom: 3%;
+}
+.history img {
+    width: 40%;
+    float: right;
+    margin: 4%;
+}
+h3 {
+    text-align: center;
 }
 /* Sector con link a la tienda */
 .tienda {
@@ -115,7 +132,7 @@ section {
     align-items: start;
     gap: 2rem;
     padding: 1rem;
-    background-color: #71f060;
+    background-color: #7fcb26;
     height: 100%;
     }
 
@@ -144,7 +161,6 @@ section {
     margin-bottom: 3%;  
     height: 90vh;
     border-radius: 5%;
-    margin: 10%;
     box-shadow: 5px 6px 9px 0px rgba(0,0,0,0.5);
 }
 /*Para el texto que sobresale de la tarjeta*/
@@ -240,13 +256,14 @@ ul li {
 form { 
     padding: 8%;
     width: 80%;
+    background-color: #7ecb26be;
+    border-radius: 0px 40px;
 }
-.formulario .form-label {
-    margin-bottom: 2%;
-}
+
 .formulario img {
     padding: 2%;
     width: 30%;
+    background-color: transparent;
 }
 /* Botones de formulario*/
 .boton {
@@ -272,8 +289,8 @@ form {
     } 
 
 .formulario input:hover , .formTextArea:hover {
-    border: 1px solid #71ff1f;
-    box-shadow: 0 0 5px 1px #71ff1f; }
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px 4px #fff; }
 
 /* Footer*/
 footer {
@@ -364,6 +381,12 @@ li a {
     .grid-it4, .grid-it5{
         padding-left: 10%;
     }
+    .history img {
+        width: 40%;
+        float: right;
+        margin: 4%;
+    }
+    
     .tienda {
         margin: 5% 0%;
         justify-content: center;
@@ -427,6 +450,7 @@ li a {
     }
     .intro img {
         width: 100%;
+        margin: 2%;
     }
     .tienda div {
         width: 100%;
@@ -482,12 +506,12 @@ li a {
     }
     #principalTienda .aside {
         width: 100%;
-        height: 20vh;
     }
     #principalTienda .aside  ul {
         width: 100%;
         margin-bottom: 2%;
         align-items: center;
+        padding: 2%;
     }
     #principalTienda .aside  ul li {
         border: 1px solid #eb9520;
@@ -521,6 +545,6 @@ li a {
       background-color: linear-gradient(to right, #306b39, #7fcb26); /* Color inicial */
     }
     to {
-      background-color: #56ee42; /* Color final */
+      background-color: #71ff1f; /* Color final */
     }
 }
