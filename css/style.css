@@ -1,28 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;0,900;1,400;1,600&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 /* Reseto y estilo general para todo el sitio web*/
+:root {
+    --color-verde: #306b39;
+    --color-verde-claro: #7fcb26;
+    --color-naranja: #eb9520;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Raleway', 'Roboto', Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    object-fit: cover;
+}
+img {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+/* para quitar el subrayado de los link*/
+a {
+    text-decoration: none;
+}
+/* para quitar el deco de la lista*/
+ul li {
+    list-style: none;
+    margin: 3%;
 }
 /* Header, logo y navbar */
 #header {
     width: 100%;
-    background: linear-gradient(to right, #306b39, #7fcb26) 100%;
+    background: linear-gradient(to right, var(--color-verde), var(--color-verde-claro)) 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 5%;
+    padding: 0px 3%;
     height: 15vh;
 }
+.container-logo {
+    width: 10%;
+}
 nav a {
-    text-decoration: none;
     color: #fff;
-    border-radius: 5px;
-    background-color: #eb9520;
-    padding: 5px;
+    border-radius: .5rem;
+    background-color: var(--color-naranja);
+    padding: .3rem;
     font-weight: bold;
     margin: 0px 5px;
 
@@ -30,17 +53,20 @@ nav a {
 #claro-oscuro {
     background-color: transparent;
     border: none;
-  
 }
 .dark {
     color: #fff;
     background-color: #000;
 }
 /* grid para el main del index*/
+.banner img {
+    max-height: 65vh;
+    object-fit: fill;
+}
 .grid-container {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
     column-gap: 2%;
     align-items: center;
     margin-bottom: 10%;
@@ -78,10 +104,10 @@ nav a {
     flex-direction: column;
 }
 section, p {
-    margin-bottom: 3%;
+    margin-bottom: 2%;
 }
 .history img {
-    width: 40%;
+    width: 30%;
     float: right;
     margin: 4%;
 }
@@ -91,18 +117,19 @@ h3 {
 /* Sector con link a la tienda */
 .tienda {
     width: 100%;
-    background: linear-gradient(to right, #306b39, #7fcb26) 100%;
+    background: linear-gradient(to right, var(--color-verde), var(--color-verde-claro)) 100%;
     display: flex;
     align-items: stretch;
     gap: 3%;
-    padding: 5%;
+    padding: 5% 8%;
     justify-content: space-around;
 
 }
 /* Cada div consta de un titulo y foto link al sector de la tienda correspondiente*/
 .tienda div {
     width: 30%;
-    border: 2px solid #306b39;
+    border: 5px solid var(--color-verde);
+    border-radius: .5rem;
     padding: 2%;
     background-color: #fff;
     display: flex;
@@ -111,14 +138,10 @@ h3 {
     justify-content: space-around;
     gap: 15%;
 }
-.tienda div a {
-    width: 100%;
-}
 /* Da el mismo formato a la foto de cada link*/
 .tienda img {
     margin-top: 5%;
-    width: 100%;
-    height: 50vh;
+    height: 40vh;
 }
 
 
@@ -132,7 +155,7 @@ h3 {
     align-items: start;
     gap: 2rem;
     padding: 1rem;
-    background-color: #7fcb26;
+    background-color: var(--color-verde-claro);
     height: 100%;
     }
 
@@ -140,7 +163,9 @@ h3 {
     margin: 10% 0%;
     font-weight: bold;
 }
-
+.aside ul li a {
+    text-decoration: none;
+}
 #tienda {
     grid-column: 2/7;
     padding: 3%;
@@ -148,7 +173,7 @@ h3 {
 /*Division para cada categoria*/
 #tienda .categoria {
     margin-bottom: 5%;
-    border-bottom: 2px solid #306b39;  
+    border-bottom: 2px solid var(--color-verde);  
 }
 /* tarjeta con la descripcion de cada planta*/
 #tienda .tarjeta {
@@ -192,17 +217,16 @@ h3 {
     align-items: center;
 }
 .intereses {
-    padding: 4%;
+    padding: 3%;
     display: flex;
-    gap: 10%;
+    gap: 5%;
     justify-content: center;
-    height: 80vh;
+    height: 60vh;
 }
 .intereses article {
     border: 1px solid #000;
     padding: 4%;
-    width: 40%;
-    box-sizing: border-box;
+    width: 30%;
     justify-content: space-around;
     overflow: auto;
 }
@@ -215,7 +239,7 @@ h3 {
     flex-direction: column;
     align-items: stretch;
     padding: 2%;
-    animation: cambiarColor 8s 1s infinite;
+    animation: cambiarColor 5s 1s infinite;
 }
 .enlaces-social h2 {
     text-align: center;
@@ -224,15 +248,7 @@ h3 {
     display: flex;
     justify-content: center;
 }
-/* para quitar el subrayado de los link*/
-li a {
-    text-decoration: none;
-}
-/* para quitar el deco de la lista*/
-ul li {
-    list-style: none;
-    margin: 3%;
-}
+
 .contacto div {
     margin-bottom: 5%;
 }
@@ -255,9 +271,9 @@ ul li {
 }
 form { 
     padding: 8%;
-    width: 80%;
-    background-color: #7ecb26be;
-    border-radius: 0px 40px;
+    width: 50%;
+    background-color: var(--color-verde-claro);
+    border-radius: 0px 2.5rem;
 }
 
 .formulario img {
@@ -267,10 +283,11 @@ form {
 }
 /* Botones de formulario*/
 .boton {
-    background-color: #306b39;
+    background-color: var(--color-verde);
+    color: #fff;
     padding: 3%;
     border-radius: 10px;
-    box-shadow: -5px 5px #999999;
+    box-shadow: -5px 5px #9999999a;
     font-weight: bold;
 }
 .formBotones {
@@ -280,7 +297,9 @@ form {
 }
 /* Nuevo color de fondo en el boton al colocar el puntero encima */
 .formBotones input[class="boton"]:hover {
-    background-color: #71ff1f; }
+    background-color:var(--color-verde-claro);
+    color: #000;
+}
 
 /* Aplica una sombra roja alrededor del input cuando no se completo correctamente*/
 .inputNoValido {
@@ -294,7 +313,7 @@ form {
 
 /* Footer*/
 footer {
-    background: linear-gradient(to right, #306b39, #7fcb26) 100%;
+    background: linear-gradient(to right, var(--color-verde),var(--color-verde-claro)) 100%;
     display: flex;
     justify-content: space-around;
     padding: 3%;
@@ -308,7 +327,6 @@ footer li {
 }
 footer h5 {
     margin-bottom: 4px;
-    text-justify: center;
 }
 .footer-copy {
     display: flex;
@@ -322,7 +340,7 @@ li a {
 
 @media screen and (max-width: 1400px ) {
     #principal, footer, .aside, header, .mainTienda { 
-        font-size: 1.4rem;
+        font-size: 1.1rem;
     }
     .grid-it2{
         grid-column: 1/4;
@@ -342,19 +360,17 @@ li a {
     .formLabel , .formEntrada {
         height: 8vh;
     }
-
     .boton {
-        width: 30%;
         font-weight: bold;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 }
 @media screen and (max-width:1024px) {
     * {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     .intro {
-        padding: 0% 4%;
+        padding: 0% 12%;
     }
     .tienda img {
         height: 30vh;
@@ -383,8 +399,6 @@ li a {
     }
     .history img {
         width: 40%;
-        float: right;
-        margin: 4%;
     }
     
     .tienda {
@@ -394,9 +408,7 @@ li a {
     .tienda img {
         height: 40vh;
     }
-    .contacto form {
-        padding: 10%;
-    }
+
     .boton-form {
         text-align: center;
         }
@@ -436,12 +448,11 @@ li a {
     
 }
 @media screen and (max-width: 600px) { 
-    header {
-        height: 15vh;
-        justify-content: end;
+    #header {
+        height: 12vh;
     }
 
-    main, .tienda, .intereses, .contacto, .formulario, .footer {
+    main, .intereses, .contacto, .formulario, .footer {
         display: block;
     }
     .intro {
@@ -452,12 +463,16 @@ li a {
         width: 100%;
         margin: 2%;
     }
+    .tienda {
+        padding: 5% 10%;
+        flex-wrap: wrap;
+    }
     .tienda div {
-        width: 100%;
+        width: 80%;
         margin: 5% 0%;
+
     }
     .tienda div img {
-        width: 100%;
         padding: 2%;
         max-height: 40vh;
     }
@@ -465,7 +480,7 @@ li a {
         width: 80%;
         height: 50vh;
         overflow: scroll;
-        margin: 10%;
+        margin: 5% 10%;
     }
     .contacto {
         margin-top: 60%;
@@ -493,8 +508,10 @@ li a {
         width: 100%;
         padding: 5%;
     }
-    .footerContactos {
-      padding-left: 18%;
+    .footerContactos ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     /* Pagina tienda */
     #principalTienda{

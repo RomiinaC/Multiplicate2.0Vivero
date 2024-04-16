@@ -11,19 +11,26 @@
 </head>
 <body>
     <header id="header">
-        <img src="images/Good_Vibras-removebg-preview.png" alt="Logo de Vivero Good Vibras" id="logo" width="100px">
+        <div class="container-logo">
+            <img src="./images/Good_Vibras-removebg-preview.png" alt="Logo de Vivero Good Vibras" id="logo">
+        </div>
+        
         <nav>
             <button id="claro-oscuro"><i class="fa-solid fa-circle-half-stroke"></i></button>
-            <a href="pages/tienda.html">TIENDA</a>
+            <a href="./pages/tienda.html"><i class="fa-solid fa-store"></i> Tienda</a>
         </nav>
     </header>
     <main id="principal">
-        <img src="images/poster.jpg" alt="Banner del vivero" width="100%">
+        <div class="banner">
+            <img src="./images/poster.jpg" alt="Banner del vivero">
+        </div>
         <section class="grid-container intro">
             <h1 class="grid-it1">Vivero Good Vibras</h1>
+            
             <div class="history grid-it1">
+                <h2>Nuestra historia</h2>
                 <p>Desde 1990, un entusiasta de la botánica decidió dar vida a su sueño. Inspirado por su amor inquebrantable por las plantas y la naturaleza, fundó "Good Vibras".</p>
-                <img src="images/germinacion-en-mano.jpg" alt="manos sosteniendo una germinacion">
+                <img src="./images/germinacion-en-mano.jpg" alt="manos sosteniendo una germinacion">
                 <p>Hoy, después de tanto tiempo, trabajo y dedicación, seguimos manteniendo este sueño vivo. Siempre disponibles para ayudarte a cuidar tus amadas plantas. Todo lo que busques y necesites lo vas a encontrar con nosotros.</p>
                 <p>Cuando se siguen los sueños con pasión y se cuida el entorno, <em>las maravillas de la naturaleza pueden florecer en cualquier lugar.</em> </p>    
             </div>
@@ -59,7 +66,7 @@
                     <li>Sabado y domingo: 9 a 16 hs</li>
                 </ul> 
             </div> 
-            <img src="images/cactus-display-nature-plants_53876-23377.jpg" alt="plantas varias" class="grid-it7" width="100%">
+            <img src="images/cactus-display-nature-plants_53876-23377.jpg" alt="plantas varias" class="grid-it7">
         </section>
         <section class="tienda">
             <div>
@@ -80,19 +87,19 @@
             <h2>Articulos de interes</h2>
             <div class="intereses">
                 <article>
-                <h3>Consejos de jardineria</h2>
-                <p>No solo las plantas tienen un cuidado especial. El suelo, el clima, el riego tienen gran importancia para que nuestras plantas crezcan sanas. Te dejo algunos consejos que te ayudaran a mejorar la salud de tu jardin</p>
-                <ul>
-                    <li>La mejor época para plantar es otoño. La primavera también, pero para especies sensibles al frío.</li>
-                    <li>Ojo a los encharcamientos, proporciona un buen drenaje.</li>
-                    <li>Si quieres aumentar el tamaño de las flores corta los botones de flores laterales dejando sólo un botón por brotecillo.</li>
-                    <li>El riego más beneficioso es el que se hace al atardecer.</li>
-                    <li>El éxito en la plantación de árboles es cavar un hoyo amplio y abonar la tierra.</li>
-                    <li>Esparce una capa de gravilla alrededor de tus plantas para mantener más la humedad de la tierra y espaciar los riegos.</li>
-                    <li>Si hay muchos hierbajos cubre el suelo con plástico negro y sobre éste echa cortezas de pino.</li>
-                    <li>Si el césped no drena realiza un aireado y un escarificado. En todo césped siempre son operaciones muy recomendables hacerlas dos veces al año, primavera y otoño.</li>
-                </ul>
-                </article>
+                    <h3>Consejos de jardineria</h2>
+                    <p>No solo las plantas tienen un cuidado especial. El suelo, el clima, el riego tienen gran importancia para que nuestras plantas crezcan sanas. Te dejo algunos consejos que te ayudaran a mejorar la salud de tu jardin</p>
+                    <ul>
+                        <li>La mejor época para plantar es otoño. La primavera también, pero para especies sensibles al frío.</li>
+                        <li>Ojo a los encharcamientos, proporciona un buen drenaje.</li>
+                        <li>Si quieres aumentar el tamaño de las flores corta los botones de flores laterales dejando sólo un botón por brotecillo.</li>
+                        <li>El riego más beneficioso es el que se hace al atardecer.</li>
+                        <li>El éxito en la plantación de árboles es cavar un hoyo amplio y abonar la tierra.</li>
+                        <li>Esparce una capa de gravilla alrededor de tus plantas para mantener más la humedad de la tierra y espaciar los riegos.</li>
+                        <li>Si hay muchos hierbajos cubre el suelo con plástico negro y sobre éste echa cortezas de pino.</li>
+                        <li>Si el césped no drena realiza un aireado y un escarificado. En todo césped siempre son operaciones muy recomendables hacerlas dos veces al año, primavera y otoño.</li>
+                    </ul>
+                    </article>
                 <article>
                     <h3>La importancia de trabajar el suelo</h2>
                     <p>
@@ -124,7 +131,7 @@
                 <form action="">
                     <div class="container-flex">
                         <label for="nombre" class="formLabel">Nombre</label>
-                        <input type="text" class="formEntrada" id="nombre" name="nombre" minlength="2" maxlength="40" required onchange="validarEntrada()">
+                        <input type="text" class="formEntrada" id="nombre" name="nombre" placeholder="Tu nombre" minlength="2" maxlength="40" required onchange="validarEntrada()">
                     </div>
                     <div class="container-flex">
                         <label for="email" class="formLabel">Correo electronico</label>
@@ -136,7 +143,7 @@
                     </div>
                     <div class="container-flex">
                         <label for="mensaje" class="formLabel">Mensaje</label>
-                        <textarea class="formTextArea" id="mensaje" name="mensaje" rows="5" maxlength="180"></textarea>
+                        <textarea class="formTextArea" id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" rows="5" maxlength="180"></textarea>
                     </div>
                     <div class="formBotones">
                         <input type="submit" class="boton" value="Enviar" >
@@ -159,8 +166,9 @@
                 </ul>
             </div>
             <div class="footer-copy">
-                <h5>Copyright 2023</h5>
-                <p>Spring 1 curso Multiplicate 2.0</p>
+                <h5>Copyright <i class="fa-solid fa-copyright"></i> 2023</h5>
+                <p>Curso Multiplicate 2.0</p>
+                <p>Romina A. Carranza</p>
             </div>
     </footer>
     <script src="js/main.js"></script>
