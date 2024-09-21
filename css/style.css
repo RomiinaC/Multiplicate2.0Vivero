@@ -4,20 +4,17 @@
     --color-verde: #306b39;
     --color-verde-claro: #7fcb26;
     --color-naranja: #eb9520;
+    --color-blanco: #f3f3f3;
+    --color-negro: #1f1f1f;
 }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Raleway', 'Roboto', Arial, Helvetica, sans-serif;
-    font-size: 1.2rem;
-    object-fit: cover;
 }
 img {
     width: 100%;
-}
-a {
-    text-decoration: none;
 }
 /* para quitar el subrayado de los link*/
 a {
@@ -27,75 +24,61 @@ a {
 ul li {
     list-style: none;
     margin: 3%;
+    width: 100%;
+}
+body {
+    color: var(--color-negro);
 }
 /* Header, logo y navbar */
 #header {
     width: 100%;
-    background: linear-gradient(to right, var(--color-verde), var(--color-verde-claro)) 100%;
+    background: linear-gradient(to right, var(--color-verde), var(--color-verde-claro));
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 3%;
+    padding: 8px 16px;
     height: 15vh;
 }
 .container-logo {
-    width: 10%;
+    width: 5rem;
 }
 nav a {
-    color: #fff;
+    color: var(--color-blanco);
     border-radius: .5rem;
     background-color: var(--color-naranja);
-    padding: .3rem;
+    padding: .3rem .5rem;
     font-weight: bold;
-    margin: 0px 5px;
-
+    text-decoration: none;
 }
 #claro-oscuro {
     background-color: transparent;
     border: none;
+    font-size: 1rem;
 }
 .dark {
-    color: #fff;
-    background-color: #000;
+    color: var(--color-blanco);
+    background-color: var(--color-negro);
 }
-/* grid para el main del index*/
+/* main del index*/
 .banner img {
     max-height: 65vh;
-    object-fit: fill;
 }
-.grid-container {
+.intro {
     width: 100%;
+    padding: 0 10vw;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    column-gap: 2%;
-    align-items: center;
-    margin-bottom: 10%;
-    justify-content: center;
-    justify-items: center;
+    grid-template-columns: 1fr;
+    row-gap: 1.2rem;
 }
-.grid-it1 {
-    grid-column: 1/7;
-    align-content: center;
-    padding: 3%;
+.history {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
 }
-.grid-it2, .grid-it4 {
-    grid-column: 1/4;
-    padding: 5%;
-    padding-left: 8%;
-}
-.grid-it3, .grid-it7  {
-    grid-column: 4/7;
-    padding: 5%;
-
-}
-.grid-it5 {
-    grid-column: 4/7;
-    padding: 5%;
-    align-self: flex-start;
-}
-.grid-it6 {
-    grid-column: 1/4;
-    padding: 5%;
+.history img {
+    width: 80%;
+    display: inline-block;
+    margin: 0 auto;
 }
 
 /* flex column*/
@@ -106,80 +89,231 @@ nav a {
 section, p {
     margin-bottom: 2%;
 }
-.history img {
-    width: 30%;
-    float: right;
-    margin: 4%;
-}
+
 h3 {
     text-align: center;
 }
 /* Sector con link a la tienda */
 .tienda {
     width: 100%;
-    background: linear-gradient(to right, var(--color-verde), var(--color-verde-claro)) 100%;
+    background: linear-gradient(to left, var(--color-verde), var(--color-verde-claro)) 100%;
     display: flex;
+    flex-direction: column;
     align-items: stretch;
-    gap: 3%;
-    padding: 5% 8%;
-    justify-content: space-around;
+    gap: 1rem;
+    padding: 5% 10%;
 
 }
 /* Cada div consta de un titulo y foto link al sector de la tienda correspondiente*/
 .tienda div {
-    width: 30%;
-    border: 5px solid var(--color-verde);
+    height: 280px;
+    max-width: 300px;
+    width: 100%;
+    border: 3px solid var(--color-verde);
     border-radius: .5rem;
-    padding: 2%;
-    background-color: #fff;
+    background-color: var(--color-blanco);
+    display: flex;
+    flex-direction: column;
+
+} 
+.tienda img {
+    height: 220px;
+    object-fit: cover;
+    border-radius: .5rem .5rem 0px 0px;
+}
+.tienda h3 {
+    padding: 8px;
+}
+
+
+/* Sector de articulos con intereses */
+.articulosInteres{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.intereses {
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.intereses article {
+    border: 1px solid #000;
+    padding: 5%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 300px;
+    gap: 1rem;
+    justify-content: space-around;
+    overflow-y: auto;
+}
+/* link a redes sociales. Aca coloque la animacion*/
+.contacto{
+    padding: 5%;
+    margin-bottom: 4rem;
+}
+.enlaces-social {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    justify-content: space-around;
-    gap: 15%;
+    padding: 5%;
+    animation: cambiarColor 3s 1s infinite;
+    margin-bottom: 3rem;
+    gap: 1rem;
 }
-/* Da el mismo formato a la foto de cada link*/
-.tienda img {
-    margin-top: 5%;
-    height: 40vh;
+.enlaces-social h2 {
+    text-align: center;
+}
+.enlaces-social ul{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.enlaces-social ul li {
+    width: max-content;
+}
+.enlaces-local {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
 }
 
+/* Formulario de contacto*/
+.formulario {
+    padding: 15% 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+form { 
+    padding: 2rem 1rem;
+    width: 100%;
+    background-color: var(--color-verde-claro);
+    border-radius: 0px 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formulario img {
+    display: none;
+}
+.formulario input, textarea {
+    padding: 4px 8px;
+    border: none;
+    border-radius: .2rem;
+    margin: 4px 0;
+}
+/* Botones de formulario*/
+.boton {
+    background-color: var(--color-verde);
+    color: var(--color-blanco);
+    padding: 3% 5%;
+    border-radius: .5rem;
+    box-shadow: -3px 3px #9999999a;
+    font-weight: bold;
+}
+.formBotones {
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+}
+/* Nuevo color de fondo en el boton al colocar el puntero encima */
+.formBotones input[class="boton"]:hover {
+    background-color:var(--color-verde-claro);
+    color: var(--color-negro);
+}
+
+/* Aplica una sombra roja alrededor del input cuando no se completo correctamente*/
+.inputNoValido {
+    border: 1px solid #ff0000;
+    box-shadow: 0 0 3px 1px #ff0000; 
+    } 
+
+.formulario input:hover , .formTextArea:hover {
+    border: 2px solid #fff;
+    box-shadow: 0 0 3px 3px var(--color-blanco); 
+}
+
+/* Footer*/
+footer {
+    background: linear-gradient(to right, var(--color-verde),var(--color-verde-claro)) 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5%;
+}
+footer div {
+    padding: 2%;
+}
+footer img{
+    width: 6rem;
+}
+footer h5 {
+    margin-bottom: 8px;
+}
+
+li a {
+    color: var(--color-negro);
+    text-decoration: none;
+}
 
 /* ------------Estilos de la pag tienda--------------*/
 
 .aside {
     font-size: 1rem;
-    grid-column: 1/2;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    gap: 2rem;
     padding: 1rem;
     background-color: var(--color-verde-claro);
-    height: 100%;
     }
 
 .aside ul li {
-    margin: 10% 0%;
+    margin: 5% 0%;
     font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #eb9520;
+    border-radius: 5px;
+    background-color: #eb9520;
+    text-align: center;
 }
 .aside ul li a {
     text-decoration: none;
+    margin: 1%;
+    
 }
 #tienda {
-    grid-column: 2/7;
-    padding: 3%;
+    padding: 8% 0;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
 }
 /*Division para cada categoria*/
 #tienda .categoria {
-    margin-bottom: 5%;
+    margin-bottom:1.2rem;
+    padding-bottom: 2rem;
     border-bottom: 2px solid var(--color-verde);  
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    gap: .8rem;
 }
 /* tarjeta con la descripcion de cada planta*/
 #tienda .tarjeta {
-    border: 1px solid #000;
-    width: 100%;
-    padding: 3%;
+    border: 2px solid var(--color-verde);
+    width: 90%;
+    max-width: 280px;
+    max-height: 380px;
+    padding: 5%;
     display: flex; 
     flex-direction: column; 
     align-items: center;
@@ -190,12 +324,12 @@ h3 {
 }
 /*Para el texto que sobresale de la tarjeta*/
 #tienda .tarjeta div {
-    overflow: scroll;
+    overflow-y: auto;
 }
 #tienda .tarjeta img {
-    width: 30vw;
     padding: 5%;
-    height: 60%;
+    height: 35vh;
+    object-fit: cover;
 }
 #tienda .tarjeta div {
     padding: 0% 5%; 
@@ -210,351 +344,123 @@ h3 {
     margin-bottom: 2%; 
     text-align: center;
     }
-/* Sector de articulos con intereses */
-.articulosInteres{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.intereses {
-    padding: 3%;
-    display: flex;
-    gap: 5%;
-    justify-content: center;
-    height: 60vh;
-}
-.intereses article {
-    border: 1px solid #000;
-    padding: 4%;
-    width: 30%;
-    justify-content: space-around;
-    overflow: auto;
-}
-/* link a redes sociales. Aca coloque la animacion*/
-.contacto{
-    padding: 5%;
-}
-.enlaces-social {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    padding: 2%;
-    animation: cambiarColor 5s 1s infinite;
-}
-.enlaces-social h2 {
-    text-align: center;
-}
-.enlaces-social ul{
-    display: flex;
-    justify-content: center;
-}
 
-.contacto div {
-    margin-bottom: 5%;
-}
-.enlaces-local {
-    padding: 6%;
-    display: flex;
-    gap: 4%;
-    justify-content: space-around;
-    height: 80vh;
-}
-.enlaces-local ul {
-    width: 50%;
-}
-/* Formulario de contacto*/
-.formulario {
-    padding: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-form { 
-    padding: 8%;
-    width: 50%;
-    background-color: var(--color-verde-claro);
-    border-radius: 0px 2.5rem;
-}
 
-.formulario img {
-    padding: 2%;
-    width: 30%;
-    background-color: transparent;
-}
-/* Botones de formulario*/
-.boton {
-    background-color: var(--color-verde);
-    color: #fff;
-    padding: 3%;
-    border-radius: 10px;
-    box-shadow: -5px 5px #9999999a;
-    font-weight: bold;
-}
-.formBotones {
-    display: flex;
-    gap: 10%;
-    justify-content: center;
-}
-/* Nuevo color de fondo en el boton al colocar el puntero encima */
-.formBotones input[class="boton"]:hover {
-    background-color:var(--color-verde-claro);
-    color: #000;
-}
-
-/* Aplica una sombra roja alrededor del input cuando no se completo correctamente*/
-.inputNoValido {
-    border: 1px solid #ff0000;
-    box-shadow: 0 0 5px 1px #ff0000; 
-    } 
-
-.formulario input:hover , .formTextArea:hover {
-    border: 2px solid #fff;
-    box-shadow: 0 0 5px 4px #fff; }
-
-/* Footer*/
-footer {
-    background: linear-gradient(to right, var(--color-verde),var(--color-verde-claro)) 100%;
-    display: flex;
-    justify-content: space-around;
-    padding: 3%;
-}
-footer div {
-    width: 45%;
-    padding: 2%;
-}
-footer li {
-    margin-bottom: 1px;
-}
-footer h5 {
-    margin-bottom: 4px;
-}
-.footer-copy {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-li a {
-    color: #000;
-}
 /* MediaQuery para responsive*/
-
-@media screen and (max-width: 1400px ) {
-    #principal, footer, .aside, header, .mainTienda { 
-        font-size: 1.1rem;
+@media  screen and (min-width: 760px) {
+    .intro {
+        grid-template-columns: 1fr 1fr;
     }
-    .grid-it2{
+    .grid-item1 {
+        grid-column: 1 /3;
+    }
+    .history {
+        display: block;
+    }
+    .history img.float-img {
+        width: 250px;
+        float: right;
+        margin: 0 0 10px 10px; /* Espacio alrededor de la imagen */
+      }
+    .tienda, .enlaces-local, .intereses, footer {
+        flex-direction: row;
+    }
+    .enlaces-local iframe{
+        width: 50%;
+    }
+    .formulario img {
+        display: block;
+        width: 40%;
+    }
+    #principalTienda .aside {
+        width: 100% ;
+        padding: 1%;
+    }
+    #principalTienda .aside ul {
+        display: flex;   
+        gap: 3%;
+        align-items: center; 
+    }
+    #principalTienda .aside  ul li{
+        margin: 1%;
+    }
+    #tienda {
+        padding: 2% 0;
+    }
+    #tienda .categoria {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 16px;
+        justify-items: center;
+    }
+    .grid-item2 {
         grid-column: 1/4;
-        align-content: center;
-        padding-left: 15%;
     }
-    .grid-it3{
-        grid-column: 4/7;
-        align-content: center;
-    }
-    .grid-it4 {
-        padding-left: 10%;
+  
+    
+}
+@media screen and (min-width:761px) and (max-width:900px) {
+    #header {
+        height: auto;
     }
     .tienda img {
-        height: 60vh;
+        height: 22vh;
+    }
+    /* Pagina tienda */
+    #principalTienda #tienda .tarjeta img {
+        width: 100%;
+        height: 50%;
+        padding: 2%;
+    }
+}
+@media screen and (min-width:900px) and (max-width:1025px) {
+    .intro {
+        padding: 0% 12%;
+    }
+    .tienda img {
+        height: 40vh;
+    }
+    .articulosInteres{
+        padding: 0 15%;
+    }
+
+}
+
+@media screen and (min-width:1026px) {
+    #principal, footer, .aside, header, .mainTienda { 
+        font-size: 1.2rem;
+    }
+    .banner img {
+        max-height: 85vh;
+    }
+    .tienda {
+        padding: 2%;
+        justify-content: center;
     }
     .formLabel , .formEntrada {
         height: 8vh;
     }
     .boton {
         font-weight: bold;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
-}
-@media screen and (max-width:1024px) {
-    * {
-        font-size: 1rem;
+    #principalTienda {
+        display: grid;
+        grid-template-columns: 1fr auto ;
     }
-    .intro {
-        padding: 0% 12%;
-    }
-    .tienda img {
-        height: 30vh;
-    }
-    .categoria .tarjeta {
+    #principalTienda .aside{
         display: flex;
         flex-direction: column;
+        width: 300px;
     }
-    #tienda .categoria .tarjeta img {
-        width: 80%;
-        height: 60vh;
-        padding: 8%;
-    }
-}
-@media screen and (max-width:900px) {
-    .grid-it2{
-        grid-column: 1/4;
-        align-content: center;
-    }
-    .grid-it3{
-        grid-column: 4/7;
-        align-content: center;
-    }
-    .grid-it4, .grid-it5{
-        padding-left: 10%;
-    }
-    .history img {
-        width: 40%;
-    }
-    
-    .tienda {
-        margin: 5% 0%;
-        justify-content: center;
-    }
-    .tienda img {
-        height: 40vh;
-    }
-
-    .boton-form {
-        text-align: center;
-        }
-    
-    /* Pagina tienda */
-    #principalTienda{
-        display: block;
-    }
-    .categoria .tarjeta {
-        display: flex;
+    #principalTienda .aside ul {
         flex-direction: column;
-    }
-    #principalTienda .aside {
-        width: 100% ;
-        padding: 0%;
-        gap: 0;
-        align-items: center;
-    }
-    #principalTienda .aside  ul {
-        display: flex;   
-        gap: 5%;
-        align-items: center; 
-    }
-    #principalTienda .aside  ul li{
-        margin: 1%;
-        border: 1px solid #eb9520;
-        border-radius: 5px;
-        background-color: #eb9520;
-        text-align: center;
-    }
-    #principalTienda #tienda .tarjeta img {
-        width: 100%;
-        height: 50vh;
-        padding: 2%;
-    }
-    
-    
-}
-@media screen and (max-width: 600px) { 
-    #header {
-        height: 12vh;
-    }
-
-    main, .intereses, .contacto, .formulario, .footer {
-        display: block;
-    }
-    .intro {
-        display: flex;
-        flex-direction: column;
-    }
-    .intro img {
-        width: 100%;
-        margin: 2%;
-    }
-    .tienda {
-        padding: 5% 10%;
-        flex-wrap: wrap;
-    }
-    .tienda div {
-        width: 80%;
-        margin: 5% 0%;
-
-    }
-    .tienda div img {
-        padding: 2%;
-        max-height: 40vh;
-    }
-    .intereses article {
-        width: 80%;
-        height: 50vh;
-        overflow: scroll;
-        margin: 5% 10%;
-    }
-    .contacto {
-        margin-top: 60%;
-    }
-    .enlaces-local {
-        flex-direction: column;
-        align-items: center;
-    }
-    .enlaces-local ul, .enlaces-local iframe {
-        width: 100%;
-    }
-    .formulario form {
-        width: 100%;   
-    }
-    .formulario img {
-        display: none;
-    }
-    .formBotones input {
-        font-size: small;
-    }
-    footer {
-        flex-direction: column;
-    }
-    footer div {
-        width: 100%;
-        padding: 5%;
-    }
-    .footerContactos ul {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    /* Pagina tienda */
-    #principalTienda{
-        display: block;
-    }
-    .categoria .tarjeta {
-        display: flex;
-        flex-direction: column;
-    }
-    #principalTienda .aside {
-        width: 100%;
-    }
-    #principalTienda .aside  ul {
-        width: 100%;
-        margin-bottom: 2%;
-        align-items: center;
-        padding: 2%;
-    }
-    #principalTienda .aside  ul li {
-        border: 1px solid #eb9520;
-        border-radius: 5px;
-        background-color: #eb9520;
-        padding: 1%;
-        text-align: center;
-    }
-    #principalTienda .aside  ul li a {
-        font-size: .8rem;
-    }
-
-    #principalTienda #tienda .categoria {
-        display: block;
-    }
-    #principalTienda #tienda .tarjeta img {
-        width: 100%;
-        height: 50vh;
-        padding: 2%;
-    }
-    #principalTienda #tienda .tarjeta div {
-        overflow: scroll;
+        padding:8px;
     }
 }
 
 
+    
 
 /* animacion para cambiar el color de fondo de la seccion de redes social */
 @keyframes cambiarColor {

@@ -1,26 +1,28 @@
 
 # Vivero Good Vibras
 
-El proyecto Vivero Good Vibras, es un sitio web de un comercio ficticio. Hecho para el curso de BA Multiplica2.0 2023.
-En el cual, se plasma un poco de la historia del comercio, los productos y servicios con los que cuenta. Atraves del formulario de contacto se pueden realizar pedidos, como asi tambien por los multiples canales de comunicacion con los que se cuenta. Ya sea telefono, direccion, correo electronico y redes sociales.
+El proyecto Vivero Good Vibras fue hecho para el curso de BA Multiplica2.0 2023 Desarrollo Web inicial. En este proyecto se utilizo HTML5, CSS y JavaScript. Es responsive. Se creó un icono y un favicon para representar la marca.
+Fue mi primer acercamiento al desarrollo Front End.
 
-link al repositorio https://github.com/RomiinaC/Multiplicate2.0
+Este proyecto trata de un sitio web de solo 2 páginas, de un comercio ficticio. En el cual, se plasma un poco de la historia del comercio, los productos y servicios que ofrece. Atraves del formulario de contacto se pueden realizar pedidos, como asi tambien por los multiples canales de comunicacion con los que cuenta. Ya sea por telefono, en el local presencial, correo electrónico y/o redes sociales.
 
+
+- Link al repositorio https://github.com/RominaCarranzaDev/Multiplicate2.0
 
 
 ## Author
 
-- Romina Carranza [@RomiinaC](https://github.com/RomiinaC)
+- Romina Carranza [@RomiinaCarranzaDev](https://github.com/RominaCarranzaDev)
 
 
 ## Deployment
 
-https://romiinac.github.io/Multiplicate2.0/
+https://rominacarranzadev.github.io/Multiplicate2.0/
 
 
 
 
-![Logo](https://romiinac.github.io/Multiplicate2.0/images/Good_Vibras-removebg-preview.png)
+![Logo](https://rominacarranzadev.github.io/Multiplicate2.0/images/Good_Vibras-removebg-preview.png)
 
 ## Color Reference
 
@@ -39,28 +41,15 @@ La gama que se utilizo de verdes y anaranjado, hacen referencia a la naturaleza 
 ![Vista mobile de la pantalla pricipal](images/Screenshot/Screenshot.jpg)
 ![Vista mobile servicios](images/Screenshot/Screenshot_1.jpg)
 ![Vista mobile horarios](images/Screenshot/Screenshot_2.jpg)
-![Vista mobile formulario de contacto](images/Screenshot/Screenshot_5.jpg)
 ![Vista tablet de la pantalla principal](images/Screenshot/Screenshot_6.jpg)
 ![Vista tablet ](images/Screenshot/Screenshot_7.jpg)
 ![Vista tablet servicios](images/Screenshot/Screenshot_8.jpg)
-![Vista tablet links a productos](images/Screenshot/Screenshot_9.jpg)
-![Vista mobile tienda](images/Screenshot/Screenshot_14.jpg)
 ![Vista tablet tienda](images/Screenshot/Screenshot_12.jpg)
 ![Vista tablet contacto](images/Screenshot/Screenshot_10.jpg)
 
 
-## Features
-
-- Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-
-
-
 ## Used By
 
-This project is used by:
-
-- Curso Front-end BA Multiplica
+- Curso Front-end BA Multiplica 2023
 
 
